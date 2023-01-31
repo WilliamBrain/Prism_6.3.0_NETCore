@@ -96,9 +96,13 @@ namespace Prism.Modularity
             if (parentDomain == null)
                 throw new ArgumentNullException(nameof(parentDomain));
 
+#if NET481
             Evidence evidence = new Evidence(parentDomain.Evidence);
             AppDomainSetup setup = parentDomain.SetupInformation;
             return AppDomain.CreateDomain("DiscoveryRegion", evidence, setup);
+#else
+            return AppDomain.CreateDomain("DiscoveryRegion");
+#endif
         }
 
         private class InnerModuleInfoLoader : MarshalByRefObject

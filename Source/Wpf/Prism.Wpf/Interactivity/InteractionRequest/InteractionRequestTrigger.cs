@@ -1,5 +1,4 @@
-using System;
-using System.Windows.Interactivity;
+using Microsoft.Xaml.Behaviors;
 
 namespace Prism.Interactivity.InteractionRequest
 {
@@ -7,7 +6,7 @@ namespace Prism.Interactivity.InteractionRequest
     /// Custom event trigger for using with <see cref="IInteractionRequest"/> objects.
     /// </summary>
     /// <remarks>
-    /// The standard <see cref="System.Windows.Interactivity.EventTrigger"/> class can be used instead, as long as the 'Raised' event 
+    /// The standard <see cref="EventTrigger"/> class can be used instead, as long as the 'Raised' event 
     /// name is specified.
     /// </remarks>
     public class InteractionRequestTrigger : EventTrigger

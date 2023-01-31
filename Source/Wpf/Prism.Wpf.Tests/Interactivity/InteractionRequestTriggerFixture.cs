@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Prism.Interactivity.InteractionRequest;
 using Prism.Wpf.Tests.Mocks;
 using System.Threading.Tasks;
+using Microsoft.Xaml.Behaviors;
 
 namespace Prism.Wpf.Tests.Interactivity
 {
@@ -80,7 +81,7 @@ namespace Prism.Wpf.Tests.Interactivity
         }
     }
 
-    public class TestableTriggerAction : System.Windows.Interactivity.TriggerAction<DependencyObject>
+    public class TestableTriggerAction : TriggerAction<DependencyObject>
     {
         public int ExecutionCount { get; set; }
 
